@@ -1,0 +1,17 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+#grid {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cella {
+  border: 1px dashed black;
+
+  width: 120px;
+  height: 120px;
+}
