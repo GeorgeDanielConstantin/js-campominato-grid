@@ -1,12 +1,24 @@
-const gridEl = document.getElementById("grid");
-generateGrid(gridEl);
+const startButton = document.getElementById("start");
 
-function generateGrid(gridEl) {
+startButton.addEventListener("click", function () {
+  const gridEl = document.getElementById("grid");
+  generateGrid(gridEl, 1);
+});
+
+function generateGrid(grid) {
   for (let i = 0; i < 99; i++) {
-    const cellaEl = document.createElement("div");
-    cellaEl.classList.add("cella");
-    gridEl.append(cellaEl);
+    const squareEl = generateSquare(i + 1);
+
+    grid.append(squareEl);
   }
 }
 
-console.log(gridEl);
+function generateSquare(numero) {
+  const square = document.createElement("div");
+  square.classList.add("cella");
+  square.innerHTML = numero;
+  square.addEventListener("click", function () {
+    console.log(this);
+  });
+  return square;
+}

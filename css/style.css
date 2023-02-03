@@ -11,6 +11,9 @@ body {
 
 .cella {
   border: 1px dashed black;
+  line-height: 120px;
+  vertical-align: middle;
+  text-align: center;
 
   width: 120px;
   height: 120px;
